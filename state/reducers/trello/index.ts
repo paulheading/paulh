@@ -8,25 +8,27 @@ interface trelloState {
   data: getTrelloSuccessAction["payload"]
 }
 
+const { list, projects, roles, education } = initial;
+
 const initialState = {
   loading: false,
   error: null,
   data: {
     pages: {
-      list: initial.list,
-      cards: [initial.projects.card, initial.projects.card, initial.projects.card]
+      list,
+      cards: [projects.card, projects.card, projects.card]
     },
     projects: {
-      list: initial.list,
-      cards: [initial.projects.card, initial.projects.card, initial.projects.card]
+      list: projects.list,
+      cards: [projects.card, projects.card, projects.card]
     },
     roles: {
-      list: initial.list,
-      cards: [initial.roles.card, initial.roles.card, initial.roles.card]
+      list: roles.list,
+      cards: [roles.card, roles.card, roles.card]
     },
     education: {
-      list: initial.list,
-      cards: [initial.education.card, initial.education.card, initial.education.card]
+      list: education.list,
+      cards: [education.card, education.card, education.card]
     }
   }
 }
