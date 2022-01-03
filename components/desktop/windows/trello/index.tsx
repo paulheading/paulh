@@ -6,7 +6,7 @@ interface Trello {
   style?: React.CSSProperties
 }
 
-export const Trello = React.forwardRef<HTMLDivElement, Trello>((props, ref) => {
+const Trello = React.forwardRef<HTMLDivElement, Trello>((props, ref) => {
   const { style } = props;
   return (
     <div ref={ref} className={styles.container} style={style}>
@@ -24,3 +24,4 @@ export * from './footer'
 export * from './empty'
 export * from './plus'
 export * from './more'
+export default Trello

@@ -14,7 +14,7 @@ const styleContainer = (year: string | undefined) => {
   }
 }
 
-export const Spotify = React.forwardRef<HTMLDivElement, Spotify>((props, ref) => {
+const Spotify = React.forwardRef<HTMLDivElement, Spotify>((props, ref) => {
   const { style, year } = props;
 
   return (
@@ -28,3 +28,4 @@ export const Spotify = React.forwardRef<HTMLDivElement, Spotify>((props, ref) =>
 
 export * from './header'
 export * from './cards'
+export default Spotify

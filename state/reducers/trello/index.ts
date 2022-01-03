@@ -48,4 +48,4 @@ const reducer = (
 }
 
 export * from './initial'
-export default reducer;
+export default reducer

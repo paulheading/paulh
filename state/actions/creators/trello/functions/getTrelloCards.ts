@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { getTrelloSuccessCard } from 'state/actions/trello'
-import { trelloCards, removeHero, makeHtml, cardType, getTrelloAttachments, getTrelloActions, getTrelloSvgs, readmore, prepLabels } from 'state/actions/creators/trello'
+import { removeHero, makeHtml, cardType, getTrelloAttachments, getTrelloActions, getTrelloSvgs, readmore, prepLabels } from '.'
+import { trelloCards } from '../variables'
 
 export async function getTrelloCards(target?:string) {
   const { data } = await axios.get(trelloCards(target), { headers: { Accept: "application/json" } });

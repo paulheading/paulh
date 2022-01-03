@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { trelloList } from 'state/actions/creators/trello'
+import { trelloList } from '../variables'
 
 export async function getTrelloList(target?: string) {
   const { data } = await axios.get(trelloList(target), { headers: { Accept: "application/json" } });

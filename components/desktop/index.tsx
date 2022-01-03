@@ -1,7 +1,8 @@
 import styles from 'styles/desktop.module.scss'
 import { useEffect, useRef } from 'react'
 import { Credit, Folder, Npm, Gem, Topbar } from 'components/desktop'
-import { Spotify, Trello } from 'components/desktop/windows'
+import Spotify from 'components/desktop/windows/spotify'
+import Trello from 'components/desktop/windows/trello'
 import { Draggable } from 'gsap/dist/Draggable'
 import gsap from 'gsap'
 
