@@ -23,12 +23,12 @@ export interface label {
 
 export interface getTrelloSuccessCard {
   name: string,
-  id: string | null,
+  id: string,
   marquee: string | null,
   attachments: attachment[],
   more: attachment | null,
   labels: label[] | null,
-  svg: string | null,
+  svg: string,
   desc: string,
   start: string,
   due: string,
