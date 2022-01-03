@@ -1,6 +1,6 @@
 import axios from 'axios'
 import showdown from 'showdown'
-import { list, trelloAttachments, trelloActions } from 'state/actions/creators/trello'
+import { list, trelloAttachments, trelloActions } from 'state/actions/creators/trello/variables'
 import { getTrelloSuccessCard, action, attachment, label } from 'state/actions/trello'
 
 export const readmore = (value: attachment[]) => value.filter(({ name }) => name === "Read more")[0];
