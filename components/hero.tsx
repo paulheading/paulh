@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
         <h1 className={styles.title}>
           <Name {...nameData} />
         </h1>
-        <div ref={target} className={styles.svg} id={id}>{parse(svg)}</div>
+        <div ref={target} className={styles.svg} id={id}>{svg && parse(svg)}</div>
       </div>
     </div>
   )

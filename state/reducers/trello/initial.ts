@@ -3,7 +3,7 @@ const
   id = "",
   desc = "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quam molestias repudiandae porro saepe deserunt ducimus</p>",
   marquee = null,
-  svg = "",
+  svg = null,
   attachments:[] = [],
   more = null,
   labels = [{ name: "personal", color: "grey" }],

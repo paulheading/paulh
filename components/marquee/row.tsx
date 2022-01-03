@@ -30,7 +30,7 @@ export const Row:React.FC = () => {
       <Link href={more ? more.url : "#" }>
         <a className={styles.link}>
         <div ref={wrap} className={styles.wrap}>
-          { repeatPhrase(marquee) }
+          { marquee && repeatPhrase(marquee) }
         </div>
         </a>
       </Link>

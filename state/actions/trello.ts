@@ -28,7 +28,7 @@ export interface getTrelloSuccessCard {
   attachments: attachment[],
   more: attachment | null,
   labels: label[] | null,
-  svg: string,
+  svg: string | null,
   desc: string,
   start: string,
   due: string,
