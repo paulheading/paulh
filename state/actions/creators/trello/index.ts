@@ -2,7 +2,8 @@ import { isAxiosError } from 'scripts/functions'
 import { trelloAction } from 'state/actions/trello'
 import { actionType } from 'state/actions/types'
 import { Dispatch } from 'redux'
-import { list, getTrelloList, getTrelloCards } from 'state/actions/creators/trello'
+import { list } from './variables'
+import { getTrelloList, getTrelloCards } from './functions'
 
 export const getTrello = () => {
   return async (dispatch: Dispatch<trelloAction>) => {
@@ -45,6 +46,3 @@ export const getTrello = () => {
     }
   }
 }
-
-export * from './variables'
-export * from './functions'

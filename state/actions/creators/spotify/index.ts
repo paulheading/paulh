@@ -3,7 +3,7 @@ import { Dispatch } from 'redux'
 import { isAxiosError } from 'scripts/functions'
 import { spotifyAction } from 'state/actions'
 import { actionType } from 'state/actions/types'
-import { spotifyPlaylist, playlist, getToken } from 'state/actions/creators/spotify'
+import { spotifyPlaylist, playlist, getToken } from './variables'
 
 interface source {
   items: [{
@@ -85,5 +85,3 @@ export const getSpotify = () => {
     }
   }
 }
-
-export * from './variables'
