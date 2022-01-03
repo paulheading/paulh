@@ -1,0 +1,13 @@
+@import "styles/globals/mixins.scss";
+
+.container_2020 {
+  @include spotify;
+  left: 18rem;
+  top: 6rem;
+}
+
+.container_2021 {
+  @include spotify;
+  left: 12rem;
+  top: 2rem;
+}

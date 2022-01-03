@@ -1,0 +1,39 @@
+@import "styles/globals/mixins.scss";
+
+.canvas {
+  background-color: $teal;
+  padding: 1rem;
+}
+
+.wrap {
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 60rem;
+  display: flex;
+  height: 30rem;
+}
+
+.windows {
+  position: relative;
+}
+
+.window {
+  background-color: black;
+  border-radius: 0.5rem;
+  position: absolute;
+  color: white;
+  padding: 1rem;
+}
+
+.folders {
+  grid-template-columns: repeat(2, auto);
+  align-content: flex-start;
+  direction: rtl;
+  display: grid;
+  gap: 0.5rem;
+
+  @include large-down {
+    display: none;
+  }
+}

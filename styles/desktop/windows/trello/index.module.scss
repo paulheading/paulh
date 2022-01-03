@@ -1,0 +1,7 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  @include trello;
+  left: 6rem;
+  top: 6rem;
+}

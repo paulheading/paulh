@@ -1,0 +1,70 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  padding: 3rem 1rem 1rem;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  left: 0;
+}
+
+.wrap {
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 60rem;
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.solid_button {
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 0.75rem;
+}
+
+.link_button {
+  border-bottom: 0.25rem solid transparent;
+  border-top: 0.25rem solid transparent;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  padding-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+
+  @include focus {
+    border-bottom-color: black;
+  }
+}
+
+.about_button_home {
+  composes: solid_button;
+  background-color: black;
+  color: white;
+
+  @include focus {
+    @include single-box;
+  }
+}
+
+.about_button {
+  composes: solid_button;
+  background-color: black;
+  color: white;
+
+  @include focus {
+    @include single-box(black);
+    background-color: transparent;
+    color: black;
+  }
+}
+
+.resume_button {
+  composes: link_button;
+}

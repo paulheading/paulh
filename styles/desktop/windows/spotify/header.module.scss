@@ -1,0 +1,27 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  background-color: $spotify-header;
+  grid-template-columns: 5rem auto;
+  min-height: 5rem;
+  display: grid;
+}
+
+.wrap {
+  grid-template-columns: auto 1.5rem;
+  padding: 0.625rem;
+  display: grid;
+}
+
+.link {
+  background-color: $gray-300;
+  display: flex;
+}
+
+.name {
+  display: block;
+}
+
+.owner {
+  display: block;
+}

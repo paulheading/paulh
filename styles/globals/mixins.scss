@@ -1,0 +1,127 @@
+@import "./variables.scss";
+
+@mixin focus {
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &[data-focus-visible-added] {
+    @content;
+  }
+}
+
+@mixin double-box(
+  $bg: white,
+  $col: black,
+  $bg_size: 0.25rem,
+  $col_size: 0.15rem
+) {
+  box-shadow: 0 0 0 $bg_size $bg, 0 0 0 ($bg_size + $col_size) $col;
+  position: relative;
+  z-index: 2;
+}
+
+@mixin single-box($bg: white, $size: 0.25rem) {
+  box-shadow: 0 0 0 $size $bg;
+  position: relative;
+  z-index: 2;
+}
+
+@mixin input-colors {
+  &,
+  &::placeholder {
+    color: inherit;
+  }
+
+  @include focus {
+    background-color: rgba($yellow, 0.2);
+
+    &,
+    &::placeholder {
+      color: black;
+    }
+  }
+}
+
+@mixin invisible-button {
+  background-color: transparent;
+  font-size: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  color: inherit;
+  padding: 1rem;
+  border: none;
+}
+
+@mixin window {
+  box-shadow: 0 0 0.5rem rgba($teal--xdark, 0.5);
+  font-family: $font-family-headings;
+  border-radius: 0.5rem;
+  position: absolute;
+  text-align: left;
+  overflow: hidden;
+  width: 16rem;
+}
+
+@mixin theme {
+  @include window;
+  background-color: gray;
+  padding: 1rem;
+}
+
+@mixin spotify {
+  @include window;
+  background-color: black;
+  color: white;
+}
+
+@mixin trello {
+  @include window;
+  background-color: $trello-bg;
+  font-size: $h5-font-size;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  color: $trello-text;
+  font-weight: 600;
+}
+
+@mixin large-up {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin large-down {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media only screen and (min-width: 520px) {
+    @content;
+  }
+}
+
+@mixin medium-down {
+  @media only screen and (max-width: 519px) {
+    @content;
+  }
+}
+
+@mixin hero-colors($a: #4261ff, $b: #ff4262, $c: #ff66b3) {
+  background: linear-gradient(0deg, $a 0%, $b 100%);
+
+  path {
+    stroke: $c;
+  }
+
+  a {
+    @include focus {
+      $tint: rgba($c, 0.5);
+      @include single-box($tint);
+      background-color: $tint;
+    }
+  }
+}

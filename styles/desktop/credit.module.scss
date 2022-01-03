@@ -1,0 +1,16 @@
+@import "styles/globals/mixins.scss";
+
+.link {
+  background-color: $teal--dark;
+  border-radius: 0.5rem;
+  display: inline-block;
+  position: relative;
+  padding: 0.625rem;
+  color: white;
+  line-height: 1;
+  z-index: 2;
+}
+
+.title {
+  text-decoration: underline;
+}
