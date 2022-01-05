@@ -4,23 +4,30 @@
   background-color: $gray-700;
   font-size: $h6-font-size;
   padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
   display: inline-block;
   color: white;
 }
 
 .badge.loading {
+  @include loading;
+  background-color: $gray-loading;
   color: transparent;
 }
 
-.badge.green {
-  background-color: $green;
+.badge:not(.loading) {
+  border-radius: 0.25rem;
+
+  &.green {
+    background-color: $green;
+  }
+  
+  &.purple {
+    background-color: $purple;
+  }
+  
+  &.blue {
+    background-color: $blue;
+  }
 }
 
-.badge.purple {
-  background-color: $purple;
-}
 
-.badge.blue {
-  background-color: $blue;
-}

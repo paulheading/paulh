@@ -6,9 +6,9 @@ import { useSelector } from 'hooks'
 
 export const Card: React.FC<getTrelloSuccessCard> = ({ name, labels, dueComplete, due, start, desc, more }) => {
   const { loading } = useSelector(({ trello }) => trello);
-  const nameData = { name, more };
-  const descData = { desc, more, className: styles.copy };
-  const statusData = { dueComplete, due, start };
+  const nameData = { name, more, loading };
+  const statusData = { dueComplete, due, start, loading };
+  const descData = { desc, more, className: styles.copy, loading };
 
   return (
     <div>

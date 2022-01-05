@@ -1,4 +1,3 @@
-
 const
   name = "",
   id = "",
@@ -18,7 +17,19 @@ export const initial = {
     name
   },
   pages: {
-    card: {
+    card: [{
+      name: "About",
+      desc: "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus sequi delectus asperiores praesentium, iusto, alias consequatur ullam autem possimus labore suscipit. Pariatur vel earum, vero sed ullam at! Obcaecati, quisquam!</p>",
+      id,
+      marquee,
+      svg,
+      start,
+      attachments,
+      more,
+      labels,
+      due,
+      dueComplete,
+    },{
       name: "Biography",
       id,
       marquee,
@@ -30,7 +41,7 @@ export const initial = {
       desc,
       due,
       dueComplete,
-    }
+    }]
   },
   projects: {
     list: {
@@ -76,7 +87,7 @@ export const initial = {
       id,
     },
     card: {
-      name: "Full-Stack Javascript Techdegree",
+      name: "Javascript Techdegree",
       due: "2020-10-02T08:00:00.000Z",
       dueComplete: true,
       desc,

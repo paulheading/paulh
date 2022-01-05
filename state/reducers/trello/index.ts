@@ -16,7 +16,7 @@ const initialState = {
   data: {
     pages: {
       list,
-      cards: [pages.card, pages.card, pages.card]
+      cards: [pages.card[0], pages.card[1], pages.card[1]]
     },
     projects: {
       list: projects.list,

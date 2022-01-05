@@ -6,9 +6,9 @@ import { Row, Skills } from 'components/resume'
 import { getPage } from 'scripts/functions'
 
 const Resume: React.FC<NextPage> = () => {
-  const { data } = useSelector(({ trello }) => trello);
+  const { loading, data } = useSelector(({ trello }) => trello);
   const { projects, roles, education } = data;
-
+  const styleLoading = loading ? styles.loading : "";
   const bio = getPage("Biography");
   
   return (
@@ -29,9 +29,11 @@ const Resume: React.FC<NextPage> = () => {
           <div className={styles.double_row}>
             <div className={styles.column}>
               <div className={styles.title_row}>
-                <h3>{ bio && bio.name }</h3>
+                <h3>{ bio.data.name }</h3>
               </div>
-              { bio && parse(bio.desc) }
+              <div className={styleLoading}>
+                { parse(bio.data.desc) }
+              </div>
             </div>
             <div className={styles.column}>
               <ul className={styles.list}>
@@ -49,7 +51,7 @@ const Resume: React.FC<NextPage> = () => {
             <div className={styles.title_row}>
               <h3>Skills</h3>
             </div>
-            <Skills />
+            <Skills loading={loading} />
           </div>
 
           <Row {...education} />
