@@ -9,6 +9,10 @@
   color: white;
 }
 
+.badge.loading {
+  color: transparent;
+}
+
 .badge.green {
   background-color: $green;
 }

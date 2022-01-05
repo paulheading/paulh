@@ -3,6 +3,7 @@ import styles from 'styles/badge.module.scss'
 interface Badge {
   className?: string
   color?: string
+  loading?: boolean 
 }
 
 const styleColor = (color: string | undefined) => {
@@ -14,8 +15,7 @@ const styleColor = (color: string | undefined) => {
   }
 }
 
-export const Badge: React.FC<Badge> = ({ children, color, className }) => (
-  <div className={`${styles.badge} ${styleColor(color)} ${className}`}>
+export const Badge: React.FC<Badge> = ({ children, color, loading, className }) => (
+  <div className={`${styles.badge} ${loading && styles.loading} ${styleColor(color)} ${className}`}>
     { children }
-  </div>
-)
+  </div>)

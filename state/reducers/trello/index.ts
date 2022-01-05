@@ -8,7 +8,7 @@ interface trelloState {
   data: getTrelloSuccessAction["payload"]
 }
 
-const { list, projects, roles, education } = initial;
+const { list, pages, projects, roles, education } = initial;
 
 const initialState = {
   loading: false,
@@ -16,7 +16,7 @@ const initialState = {
   data: {
     pages: {
       list,
-      cards: [projects.card, projects.card, projects.card]
+      cards: [pages.card, pages.card, pages.card]
     },
     projects: {
       list: projects.list,

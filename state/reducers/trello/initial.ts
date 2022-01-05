@@ -17,6 +17,21 @@ export const initial = {
     id,
     name
   },
+  pages: {
+    card: {
+      name: "Biography",
+      id,
+      marquee,
+      svg,
+      start,
+      attachments,
+      more,
+      labels,
+      desc,
+      due,
+      dueComplete,
+    }
+  },
   projects: {
     list: {
       name: "Projects",

@@ -4,24 +4,15 @@ import { getTrelloSuccessList, getTrelloSuccessCard } from 'state/actions/trello
 
 interface Row {
   list: getTrelloSuccessList
-  cards: getTrelloSuccessCard[] 
+  cards: getTrelloSuccessCard[]
 }
 
 export const Row: React.FC<Row> = ({ list, cards }) => {
-  
+    
   const printCards = () => {
-    return cards.map((card, index) => {
-      if (index === 3) {
-        return null;        
-      }
-
-      return (
-        <div key={index} className={styles.column}>
-          <Card {...card} />
-        </div>
-      )
-    });
-  }  
+    const initial = cards.filter((_,index) => index <= 2);
+    return initial.map((card, index) => <div key={index} className={styles.column}><Card {...card} /></div>);
+  }
 
   return (
     <div className={styles.triple_row}>
