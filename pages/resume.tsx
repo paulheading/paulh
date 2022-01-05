@@ -4,11 +4,11 @@ import { useSelector } from 'hooks'
 import parse from 'html-react-parser'
 import { Row, Skills } from 'components/resume'
 import { getPage } from 'scripts/functions'
+import { Loading } from 'components'
 
 const Resume: React.FC<NextPage> = () => {
   const { loading, data } = useSelector(({ trello }) => trello);
   const { projects, roles, education } = data;
-  const styleLoading = loading ? styles.loading : "";
   const bio = getPage("Biography");
   
   return (
@@ -31,9 +31,7 @@ const Resume: React.FC<NextPage> = () => {
               <div className={styles.title_row}>
                 <h3>{ bio.data.name }</h3>
               </div>
-              <div className={styleLoading}>
-                { parse(bio.data.desc) }
-              </div>
+              { loading ? <Loading lines={[0.8,1,0.6]} /> : parse(bio.data.desc) }
             </div>
             <div className={styles.column}>
               <ul className={styles.list}>

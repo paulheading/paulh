@@ -128,8 +128,6 @@
 
 @mixin loading($color: $gray-loading) {
   background-color: $color;
-  vertical-align: middle;
-  display: inline-block;
   position: relative;
   overflow: hidden;
   color: $color;

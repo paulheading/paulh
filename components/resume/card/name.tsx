@@ -1,6 +1,6 @@
-import styles from 'styles/resume/card/name.module.scss'
 import { getTrelloSuccessCard } from 'state/actions/trello'
 import { removeHero } from 'state/actions/creators/trello/functions'
+import { Loading } from 'components'
 
 interface Name {
   name: getTrelloSuccessCard["name"]
@@ -9,8 +9,6 @@ interface Name {
 }
 
 export const Name: React.FC<Name> = ({ more, name, loading }) => {
-  const styleLoading = loading ? styles.loading : '';
-  const printName = <span className={styleLoading}>{removeHero(name)}</span>;
-  
-  return more ? <a href={more.url} className={styles.link}>{printName}</a> : printName
+  const printName = loading ? <Loading lines={[0.8]} /> : <span>{removeHero(name)}</span>;    
+  return more ? <a href={more.url}>{printName}</a> : printName
 }
