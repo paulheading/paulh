@@ -2,6 +2,7 @@
 
 .container {
   place-items: center;
+  overflow: hidden;
   display: grid;
   height: 30rem;
 }
@@ -35,6 +36,8 @@
 
 .title {
   composes: content;
+  padding-right: 2rem;
+  padding-left: 2rem;
   z-index: 2;
 }
 

@@ -1,6 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import styles from 'styles/email.module.scss'
+import { printError } from 'scripts/functions'
+import { Alert } from 'components'
+import gsap from 'gsap'
 
 interface form {
   from: string
@@ -14,15 +17,13 @@ interface data extends form {
   [key: string]: string
 }
 
-interface error {
-  message?: string
-  type?: string
-}
-
 export const Email:React.FC = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<form>();
   const [formSuccess, setFormSuccess] = useState(false);
   const encode = (data:data) => Object.keys(data).map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&");
+  const fromInput = { required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ };
+  const alertRef = useRef(null);
+  
   const onSubmit = (form:form) => {
     fetch("/", {
       method: "POST",
@@ -37,19 +38,16 @@ export const Email:React.FC = () => {
     .catch(error => alert(error));
   }
 
-  const fromInput = { required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ };
-  const printError = ({ type }:error) => {    
-    switch (type) {
-      case "pattern" : return "This email address isn't valid"
-      case "required" : return "Please fill in your email address"
-      default: return ""
+  useEffect(() => {
+    if (formSuccess && alertRef) {
+      gsap.to(alertRef.current,{ delay: 1, opacity: 0, onComplete: () => setFormSuccess(false) });
     }
-  }
+  },[formSuccess]);
 
   return (
     <div className={styles.container}>
       <div className={styles.wrap}>
-        { formSuccess && "success!" }
+        { formSuccess && <Alert ref={alertRef} success className={styles.alert}>Success!</Alert> }
         <div className={styles.topbar}>
           <button className={styles.close_icon}>close</button>
           <button className={styles.minimise_icon}>minimise</button>

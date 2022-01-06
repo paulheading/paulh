@@ -5,3 +5,16 @@
     display: none;
   }
 }
+
+@include medium-down {
+  .container {
+    display: block;
+  }
+}
+
+@include small-down {
+  .container {
+    height: 44px;
+    width: auto;
+  }
+}

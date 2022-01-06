@@ -3,13 +3,14 @@
 .container {
   background-color: $gray-200;
   padding: 5rem 1rem 0;
+  overflow: hidden;
   color: $gray-500;
 }
 
 .wrap {
-  max-width: 40rem;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  max-width: 40rem;
 }
 
 .topbar {
@@ -46,6 +47,7 @@
 
 .wrap_form {
   padding-left: 2rem;
+  overflow: hidden;
 }
 
 .row {
@@ -93,4 +95,8 @@
 .submit {
   @include input-colors;
   @include invisible-button;
+}
+
+.alert {
+  margin-bottom: 1rem;
 }

@@ -1,5 +1,9 @@
 @import "styles/globals/mixins.scss";
 
+.container {
+  overflow: hidden;
+}
+
 .canvas {
   background-color: $teal;
   padding: 1rem;

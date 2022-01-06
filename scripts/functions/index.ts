@@ -15,3 +15,4 @@ export const createDesc = (target: string) => {
 }
 
 export * from './trello'
+export * from './email'

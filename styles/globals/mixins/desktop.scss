@@ -1,0 +1,33 @@
+@import "../variables.scss";
+
+@mixin window {
+  box-shadow: 0 0 0.5rem rgba($teal--xdark, 0.5);
+  font-family: $font-family-headings;
+  border-radius: 0.5rem;
+  position: absolute;
+  text-align: left;
+  overflow: hidden;
+  width: 16rem;
+}
+
+@mixin theme {
+  @include window;
+  background-color: gray;
+  padding: 1rem;
+}
+
+@mixin spotify {
+  @include window;
+  background-color: black;
+  color: white;
+}
+
+@mixin trello {
+  @include window;
+  background-color: $trello-bg;
+  font-size: $h5-font-size;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  color: $trello-text;
+  font-weight: 600;
+}
