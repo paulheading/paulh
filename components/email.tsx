@@ -20,7 +20,7 @@ interface error {
 }
 
 export const Email:React.FC = () => {
-  const { register, reset, handleSubmit, formState: { errors } } = useForm<form>();
+  const { register, handleSubmit, formState: { errors } } = useForm<form>();
   const [formSuccess, setFormSuccess] = useState(false);
   const encode = (data:data) => Object.keys(data).map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&");
   const onSubmit = (form:form) => {
