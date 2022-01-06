@@ -1,4 +1,4 @@
-import { RefObject, useState } from 'react'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import styles from 'styles/email.module.scss'
 
@@ -15,13 +15,12 @@ interface data extends form {
 }
 
 interface error {
-  message: string
-  ref: RefObject<HTMLInputElement>
-  type: string
+  message?: string
+  type?: string
 }
 
 export const Email:React.FC = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, reset, handleSubmit, formState: { errors } } = useForm<form>();
   const [formSuccess, setFormSuccess] = useState(false);
   const encode = (data:data) => Object.keys(data).map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&");
   const onSubmit = (form:form) => {
@@ -30,7 +29,11 @@ export const Email:React.FC = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...form }) 
     })
-    .then(() => setFormSuccess(true))
+    .then(() => {
+      const form = (document.getElementsByTagName("form")[0] as HTMLFormElement);
+      setFormSuccess(true);
+      form.reset();      
+    })
     .catch(error => alert(error));
   }
 
