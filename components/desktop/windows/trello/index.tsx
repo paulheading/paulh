@@ -4,16 +4,21 @@ import { Header, Cards, Footer } from 'components/desktop/windows/trello'
 
 interface Trello {
   style?: React.CSSProperties
+  id?: string
 }
 
 const Trello = React.forwardRef<HTMLDivElement, Trello>((props, ref) => {
-  const { style } = props;
+  const { style, id } = props;
   return (
-    <div ref={ref} className={styles.container} style={style}>
-      {/* <a className={styles.skiplink} href="#trello">Skip to Projects</a> */}
-      <Header />
-      <Cards />
-      <Footer />
+    <div ref={ref} className={styles.container} style={style} id={id}>
+      <div className={styles.wrap}>
+        <a className={styles.skiplink} href="#folders">Skip to Folders</a>
+        <div className={styles.window_inner}>
+          <Header />
+          <Cards />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 });

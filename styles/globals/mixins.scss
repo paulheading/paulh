@@ -11,7 +11,7 @@
   }
 
   @include focus {
-    background-color: rgba($yellow, 0.2);
+    background-color: $focus;
 
     &,
     &::placeholder {

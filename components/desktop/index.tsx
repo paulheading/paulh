@@ -28,9 +28,9 @@ export const Desktop: React.FC = () => {
           <div ref={windows} className={styles.windows}>
             <Spotify ref={spotify_2020} year="2020" />
             <Spotify ref={spotify_2021} year="2021" />
-            <Trello ref={trello} />
-            {/* <Npm />
-            <Gem /> */}
+            <Trello ref={trello} id="trello" />
+            {/* <Npm /> */}
+            {/* <Gem /> */}
           </div>
           <div className={styles.folders}>
             <Folder target={spotify_2020.current} closed>

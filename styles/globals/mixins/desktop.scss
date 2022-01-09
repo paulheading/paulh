@@ -1,25 +1,60 @@
 @import "../variables.scss";
 
-@mixin window {
+@mixin window_outer {
+  position: absolute;
+  text-align: left;
+
+  .wrap {
+    position: relative;
+  }
+  
+  .skiplink {
+    @include skiplink;
+  }
+}
+
+@mixin window_inner {
   box-shadow: 0 0 0.5rem rgba($teal--xdark, 0.5);
   font-family: $font-family-headings;
   border-radius: 0.5rem;
-  position: absolute;
-  text-align: left;
   overflow: hidden;
   width: 16rem;
 }
 
 @mixin theme {
-  @include window;
-  background-color: gray;
-  padding: 1rem;
+  @include window_outer;
+
+  .window_inner {
+    @include window_inner;
+    background-color: gray;
+    padding: 1rem;
+  }
+}
+
+@mixin skiplink {
+  border: 0.25rem solid black;
+  background-color: white;
+  border-radius: 0.5rem;
+  position: absolute;
+  padding: 0.75rem;
+  color: black;
+  z-index: -1;
+  left: -1rem;
+  top: -1rem;
+
+  @include focus {
+    z-index: 2;
+  }
 }
 
 @mixin spotify($closed: false) {
-  @include window;
-  background-color: black;
-  color: white;
+  @include window_outer;  
+
+  .window_inner {
+    @include window_inner;
+    background-color: black;
+    color: white;
+  }
 
   @if $closed {
     transform: scale(0.5);
@@ -29,11 +64,15 @@
 }
 
 @mixin trello {
-  @include window;
-  background-color: $trello-bg;
-  font-size: $h5-font-size;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  color: $trello-text;
-  font-weight: 600;
+  @include window_outer;
+
+  .window_inner {
+    @include window_inner;
+    background-color: $trello-bg;
+    font-size: $h5-font-size;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    color: $trello-text;
+    font-weight: 600;
+  }
 }

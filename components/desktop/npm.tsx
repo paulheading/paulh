@@ -12,9 +12,11 @@ export const Npm: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      {loading && <h4>Loading...</h4>}
-      {error && <h4>{error}</h4>}
-      {data && <h4>{data.name} {data.downloads}</h4>}
+      <div className={styles.window_inner}>
+        {loading && <h4>Loading...</h4>}
+        {error && <h4>{error}</h4>}
+        {data && <h4>{data.name} {data.downloads}</h4>}
+      </div>
     </div>
   )
 }

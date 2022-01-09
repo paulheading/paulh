@@ -61,8 +61,16 @@ p {
   + p {
     margin-top: 1rem;
   }
+
+  a {
+    @include focus {
+      background-color: $focus;
+      @include single-box($focus);
+    }
+  }
 }
 
 input, textarea {
   -webkit-appearance: none;
+  border-radius: 0;
 }

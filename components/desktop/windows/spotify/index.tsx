@@ -19,9 +19,13 @@ const Spotify = React.forwardRef<HTMLDivElement, Spotify>((props, ref) => {
 
   return (
     <div ref={ref} className={styleContainer(year)} style={style}>
-      {/* <a className={styles.skiplink} href="#trello">Skip to Projects</a> */}
-      <Header {...props} />
-      <Cards {...props} />
+      <div className={styles.wrap}>
+        <a className={styles.skiplink} href="#trello">Skip to Projects</a>
+        <div className={styles.window_inner}>
+          <Header {...props} />
+          <Cards {...props} />
+        </div>
+      </div>
     </div>
   );
 });

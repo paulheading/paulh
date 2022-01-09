@@ -1,9 +1,10 @@
 @import "styles/globals/mixins.scss";
 
 .container {
-  background-color: $spotify-header;
   grid-template-columns: 5rem auto;
+  position: relative;
   min-height: 5rem;
+  overflow: hidden;
   display: grid;
 }
 
