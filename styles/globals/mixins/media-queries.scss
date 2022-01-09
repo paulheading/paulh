@@ -2,7 +2,7 @@
 $large: 1024;
 $medium: 768;
 $small: 520;
-$xsmall: 380;
+$xsmall: 360;
 
 @mixin large-up {
   @media only screen and (min-width: #{$large}px) {
