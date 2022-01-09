@@ -8,6 +8,18 @@ body {
   font-weight: 800;
   padding: 0;
   margin: 0;
+
+  &[id="000000"] {
+    background-color: #ff4262;
+  }
+
+  &[id="606d70215309533eec28564a"] {
+    background-color: $hero-a-2;
+  }
+
+  &[id="6073409c74b96c31fb853842"] {
+    background-color: $hero-b-2;
+  }
 }
 
 a {

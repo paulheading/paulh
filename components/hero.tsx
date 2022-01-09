@@ -11,7 +11,8 @@ export const Hero: React.FC = () => {
 
   useEffect(() => {
     animateHero(id, target);
-  },[id]);
+    document.body.id = id;
+  });
     
   return (
     <div className={styles.container} id={id}>
