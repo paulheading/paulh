@@ -67,7 +67,9 @@ export const Email:React.FC = () => {
               <input {...register("from", fromInput)} type="text" name="from" id="from" placeholder="friendly@visitor.org" />
               { errors.from && printError(errors.from) }
             </div>
-            <textarea {...register("message")} className={styles.textarea} name="message" id="message" placeholder="Message" cols={30} rows={10} />
+            <div className={styles.wrap_textarea}>
+              <textarea {...register("message")} className={styles.textarea} name="message" id="message" placeholder="Message" cols={30} rows={10} />
+            </div>
             <div className="text-align-right">
               <button className={styles.submit} type="submit">Submit</button>
             </div>

@@ -18,7 +18,7 @@ const Resume: React.FC<NextPage> = () => {
           
           <div className={styles.double_row}>
             <div className={styles.column}>
-              <h1>Paul Heading</h1>
+              <h1 className={styles.name}>Paul Heading</h1>
             </div>
             <div className={styles.column}>
               <div>Hackney, London</div>

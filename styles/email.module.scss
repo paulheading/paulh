@@ -46,15 +46,27 @@
 }
 
 .wrap_form {
-  padding-left: 2rem;
   overflow: hidden;
+
+  @include medium-up {
+    padding-left: 2rem;
+  }
 }
 
 .row {
   border-bottom: 1px solid $gray-500;
-  grid-template-columns: 8rem auto;
-  align-items: center;
   display: grid;
+
+  @include medium-up {
+    grid-template-columns: 8rem auto;
+    align-items: center;
+  }
+
+  @include medium-down {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    padding-top: 0.75rem;
+  }
 
   input {
     @include input-colors;
@@ -71,6 +83,12 @@
   justify-content: flex-start;
   padding-bottom: 0.75rem;
   padding-top: 0.75rem;
+
+  @include medium-down {
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 1rem;
+  }
 }
 
 .tag {
@@ -99,4 +117,11 @@
 
 .alert {
   margin-bottom: 1rem;
+}
+
+.wrap_textarea {
+  @include medium-down {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
 }

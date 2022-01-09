@@ -33,7 +33,7 @@ export const Desktop: React.FC = () => {
             <Gem /> */}
           </div>
           <div className={styles.folders}>
-            <Folder target={spotify_2020.current}>
+            <Folder target={spotify_2020.current} closed>
               spotify 2020
             </Folder>
             <Folder target={spotify_2021.current}>

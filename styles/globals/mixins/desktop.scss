@@ -16,10 +16,16 @@
   padding: 1rem;
 }
 
-@mixin spotify {
+@mixin spotify($closed: false) {
   @include window;
   background-color: black;
   color: white;
+
+  @if $closed {
+    transform: scale(0.5);
+    display: none;
+    opacity: 0;
+  }
 }
 
 @mixin trello {

@@ -4,4 +4,9 @@
   @include trello;
   left: 6rem;
   top: 6rem;
+
+  @include small-down {
+    left: -4rem;
+    top: 10rem;
+  }
 }
