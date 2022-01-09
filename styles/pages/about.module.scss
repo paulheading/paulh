@@ -1,8 +1,16 @@
 @import "styles/globals/mixins.scss";
 
 .container {
-  padding: 10rem 1rem;
+  padding-bottom: 8rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 9rem;
   text-align: left;
+
+  @include medium-up {
+    padding-bottom: 9rem;
+    padding-top: 10rem;
+  }
 
   h1 {
     margin-bottom: 1rem;

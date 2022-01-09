@@ -14,7 +14,7 @@ export const Layout:React.FC = ({ children }) => {
     getMedium();
   }
 
-  console.log("state: ", useSelector(state => state)); 
+  // console.log("state: ", useSelector(state => state)); 
   
   return (
     <div className={styles.container}>

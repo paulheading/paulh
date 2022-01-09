@@ -68,7 +68,7 @@ export const Email:React.FC = () => {
               { errors.from && printError(errors.from) }
             </div>
             <div className={styles.wrap_textarea}>
-              <textarea {...register("message")} className={styles.textarea} name="message" id="message" placeholder="Message" cols={30} rows={10} />
+              <textarea {...register("message")} className={styles.textarea} name="message" id="message" placeholder="Message" />
             </div>
             <div className="text-align-right">
               <button className={styles.submit} type="submit">Submit</button>
