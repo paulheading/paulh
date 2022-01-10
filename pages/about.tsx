@@ -3,10 +3,12 @@ import styles from 'styles/pages/about.module.scss'
 import { getPage } from 'scripts/functions'
 import { Loading } from 'components'
 import parse from 'html-react-parser'
+import { clearBody } from 'hooks'
 
 const About: React.FC<NextPage> = () => {
   const { loading, data } = getPage("About");
   const content = loading ? <Loading lines={[1,0.75,1,0.5]} /> : <div>{parse(data.desc)}</div>
+  clearBody();
   
   return (
     <div className={styles.container}>

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import styles from 'styles/pages/resume.module.scss'
-import { useSelector } from 'hooks'
+import { clearBody, useSelector } from 'hooks'
 import parse from 'html-react-parser'
 import { Row, Skills } from 'components/resume'
 import { getPage } from 'scripts/functions'
@@ -10,6 +10,7 @@ const Resume: React.FC<NextPage> = () => {
   const { loading, data } = useSelector(({ trello }) => trello);
   const { projects, roles, education } = data;
   const bio = getPage("Biography");
+  clearBody();
   
   return (
     <div className={styles.container}>

@@ -5,7 +5,7 @@ import { useSelector, getTrello, setCount, setHero, getSpotify, getMedium } from
 import { testing } from 'scripts/variables'
 
 export const Layout:React.FC = ({ children }) => {
-  
+
   if (!testing) {
     getTrello();
     setCount();
