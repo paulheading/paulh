@@ -10,12 +10,7 @@ export const Hero: React.FC = () => {
   const target = useRef(null);
 
   useEffect(() => {
-    document.body.id = id;
-  },[]);
-
-  useEffect(() => {
     animateHero(id, target);
-    document.body.id = id;
   },[id]);
     
   return (
