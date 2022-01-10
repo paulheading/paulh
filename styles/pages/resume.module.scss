@@ -103,3 +103,10 @@
     font-size: $h3-font-size;
   }
 }
+
+.link {
+  @include focus {
+    @include single-box($focus--dark);
+    background-color: $focus--dark;
+  }
+}

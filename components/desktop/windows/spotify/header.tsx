@@ -24,8 +24,12 @@ export const Header: React.FC<Header> = ({ year }) => {
       </div>
       <div className={styles.wrap}>
         <div>
-          <a href={url} className={styles.name}>{ name }</a>
-          <a href={owner.url} className={styles.owner}>{ owner.name }</a>
+          <div>
+            <a href={url} className={styles.name}>{ name }</a>
+          </div>
+          <div>
+            <a href={owner.url} className={styles.owner}>{ owner.name }</a>
+          </div>
         </div>
         <div>
           <Spotify />

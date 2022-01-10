@@ -10,6 +10,7 @@ const Resume: React.FC<NextPage> = () => {
   const { loading, data } = useSelector(({ trello }) => trello);
   const { projects, roles, education } = data;
   const bio = getPage("Biography");
+  const email = `hello@paulh.biz`;
   
   return (
     <div className={styles.container}>
@@ -22,7 +23,7 @@ const Resume: React.FC<NextPage> = () => {
             </div>
             <div className={styles.column}>
               <div>Hackney, London</div>
-              <a href="mailto:hello@paulh.biz">hello@paulh.biz</a>
+              <a className={styles.link} href={`mailto:${email}`}>{email}</a>
             </div>
           </div>
 
@@ -35,8 +36,8 @@ const Resume: React.FC<NextPage> = () => {
             </div>
             <div className={styles.column}>
               <ul className={styles.list}>
-                <li><a href="https://github.com/paulheading">Github</a></li>
-                <li><a href="https://blog.paulh.biz/">Medium</a></li>
+                <li><a className={styles.link} href="https://github.com/paulheading">Github</a></li>
+                <li><a className={styles.link} href="https://blog.paulh.biz/">Medium</a></li>
               </ul>
             </div>
           </div>

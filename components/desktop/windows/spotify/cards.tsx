@@ -11,18 +11,22 @@ interface Card {
   url: string
 }
 
-const Card: React.FC<Card> = ({ number, name, artist }) => {
+const Card: React.FC<Card> = ({ number, name, artist, url }) => {
   return (
     <div className={styles.row}>
       <div className={styles.number}>
         { number }
       </div>
       <div className={styles.info}>
-        <div className={styles.title}>
-          { name }
+        <div>
+          <a href={url} className={styles.title}>
+            { name }
+          </a>
         </div>
-        <div className={styles.artist}>
-          { artist.name }
+        <div>
+          <a href={artist.url} className={styles.artist}>
+            { artist.name }
+          </a>          
         </div>
       </div>
     </div>

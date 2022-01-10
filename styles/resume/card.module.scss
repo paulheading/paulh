@@ -13,4 +13,19 @@
   margin-top: 0.5rem;
   color: $gray-700;
   font-size: 1rem;
+
+  a {
+    @include focus {
+      @include single-box($focus);
+      background-color: $focus;
+      color: black;
+    }
+  }
+}
+
+.link {
+  @include focus {
+    @include single-box($focus--dark);
+    background-color: $focus--dark;
+  }
 }

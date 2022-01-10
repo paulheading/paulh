@@ -54,4 +54,7 @@ $status-neutral: hsl(205, 100%, 37%);
 $status-error: hsl(0, 45%, 37%);
 $status-success: hsl(120, 30%, 37%);
 
-$focus: rgba($yellow, 0.25);
+$focus: hsl(45, 100%, 90%);
+$focus--dark: hsl(45, 100%, 65%);
+
+$topbar: $gray-500;
