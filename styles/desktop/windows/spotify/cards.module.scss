@@ -1,6 +1,7 @@
 @import "styles/globals/mixins.scss";
 
 .container {
+  border: 1px solid $spotify-header;
   padding-bottom: 0.5rem;
   color: $spotify-text;
   padding-top: 0.5rem;

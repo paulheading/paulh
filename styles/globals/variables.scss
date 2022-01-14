@@ -45,10 +45,11 @@ $hero-b-3: hsl(50, 100%, 70%);
 $hero-a: $hero-a-1, $hero-a-2, $hero-a-3;
 $hero-b: $hero-b-1, $hero-b-2, $hero-b-3;
 
-$h1-font-size: 2.5rem;
-$h3-font-size: 2rem;
+$h1-font-size: 2.500rem;
+$h3-font-size: 2.000rem;
+$h4-font-size: 1.500rem;
 $h5-font-size: 1.125rem;
-$h6-font-size: 1rem;
+$h6-font-size: 1.000rem;
 
 $status-neutral: hsl(205, 100%, 37%);
 $status-error: hsl(0, 45%, 37%);

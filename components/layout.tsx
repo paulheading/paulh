@@ -1,7 +1,7 @@
 import styles from 'styles/layout.module.scss'
 import Head from 'next/head'
 import { Header, Marquee, Desktop, Email, Footer } from 'components'
-import { useSelector, getTrello, setCount, setHero, getSpotify, getMedium } from 'hooks'
+import { useSelector, getTrello, setCount, setHero, getSpotify, getMedium, getNpm, getGem } from 'hooks'
 import { testing } from 'scripts/variables'
 
 export const Layout:React.FC = ({ children }) => {
@@ -12,9 +12,11 @@ export const Layout:React.FC = ({ children }) => {
     setHero();
     getSpotify();
     getMedium();
+    getNpm();
+    getGem();
   }
 
-  // console.log("state: ", useSelector(state => state)); 
+  console.log("state: ", useSelector(state => state)); 
   
   return (
     <div className={styles.container}>

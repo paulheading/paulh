@@ -1,29 +1,24 @@
 import styles from 'styles/desktop/windows/spotify/index.module.scss'
-import React from 'react'
+import { forwardRef } from 'react'
 import { Header, Cards } from 'components/desktop/windows/spotify'
 
 interface Spotify {
-  style?: React.CSSProperties
-  year?: string  
+  content: any
+  className?: string
+  closed?: boolean
 }
 
-const styleContainer = (year: string | undefined) => {
-  switch (year) {
-    case "2021": return styles.container_2021;
-    default: return styles.container_2020;
-  }
-}
-
-const Spotify = React.forwardRef<HTMLDivElement, Spotify>((props, ref) => {
-  const { style, year } = props;
+const Spotify = forwardRef<HTMLDivElement, Spotify>((props, ref) => {
+  const { className, closed, content } = props;
+  const styleClosed = closed ? styles.closed : "";
 
   return (
-    <div ref={ref} className={styleContainer(year)} style={style}>
+    <div ref={ref} className={`${styles.window_outer} ${className} ${styleClosed}`}>
       <div className={styles.wrap}>
         <a className={styles.skiplink} href="#trello">Skip to Projects</a>
         <div className={styles.window_inner}>
-          <Header {...props} />
-          <Cards {...props} />
+          <Header {...content} />
+          <Cards {...content} />
         </div>
       </div>
     </div>

@@ -3,33 +3,14 @@
 @mixin window_outer {
   position: absolute;
   text-align: left;
-
-  .wrap {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .skiplink {
-    @include skiplink;
-  }
 }
 
 @mixin window_inner {
-  box-shadow: 0 0 0.5rem rgba($teal--xdark, 0.5);
+  box-shadow: 0 0 0.5rem rgba(black, 0.5);
   font-family: $font-family-headings;
   border-radius: 0.5rem;
   overflow: hidden;
   width: 16rem;
-}
-
-@mixin theme {
-  @include window_outer;
-
-  .window_inner {
-    @include window_inner;
-    background-color: gray;
-    padding: 1rem;
-  }
 }
 
 @mixin skiplink {
@@ -48,35 +29,5 @@
   @include focus {
     opacity: 1;
     z-index: 2;
-  }
-}
-
-@mixin spotify($closed: false) {
-  @include window_outer;  
-
-  .window_inner {
-    @include window_inner;
-    background-color: black;
-    color: white;
-  }
-
-  @if $closed {
-    transform: scale(0.5);
-    display: none;
-    opacity: 0;
-  }
-}
-
-@mixin trello {
-  @include window_outer;
-
-  .window_inner {
-    @include window_inner;
-    background-color: $trello-bg;
-    font-size: $h5-font-size;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
-    color: $trello-text;
-    font-weight: 600;
   }
 }

@@ -12,14 +12,16 @@ export const getGem = () => {
 
     try {
       const { data } = await axios.get("https://rubygems.org/api/v1/gems/futuro", { headers: { Accept: "application/json" } });
-      const { downloads, name, project_url } = data;
+      const { downloads, name, project_uri, version, platform } = data;
 
       dispatch({
         type: actionType.get_gem_success,
         payload: {
           downloads,
           name,
-          url: project_url
+          url: project_uri,
+          version,
+          platform
         }
       });
       
