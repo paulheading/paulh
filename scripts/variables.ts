@@ -1,2 +1,4 @@
 
-export const testing = process.env.NEXT_PUBLIC_ENVIRONMENT === "test";
+export const env = {
+  is: (value:string) => process.env.NEXT_PUBLIC_ENVIRONMENT === value
+}

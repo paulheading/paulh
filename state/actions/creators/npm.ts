@@ -12,7 +12,6 @@ export const getNpm = () => {
 
     try {
       const { data } = await axios.get("https://api.npms.io/v2/package/barbican-reset", { headers: { Accept: "application/json" } });
-      console.log("data: ", data);
       const { npm, metadata } = data.collected;
       const { name, links, version } = metadata;
       const { downloads } = npm;

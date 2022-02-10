@@ -2,11 +2,11 @@ import styles from 'styles/layout.module.scss'
 import Head from 'next/head'
 import { Header, Marquee, Desktop, Email, Footer } from 'components'
 import { useSelector, getTrello, setCount, setHero, getSpotify, getMedium, getNpm, getGem } from 'hooks'
-import { testing } from 'scripts/variables'
+import { env } from 'scripts/variables'
 
 export const Layout:React.FC = ({ children }) => {
 
-  if (!testing) {
+  if (!env.is('test')) {
     getTrello();
     setCount();
     setHero();
@@ -16,7 +16,9 @@ export const Layout:React.FC = ({ children }) => {
     getGem();
   }
 
-  console.log("state: ", useSelector(state => state)); 
+  if (env.is('local')) {
+    console.log("state: ", useSelector(state => state))
+  }
   
   return (
     <div className={styles.container}>
