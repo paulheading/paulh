@@ -1,4 +1,3 @@
-import moment from 'moment'
 import { Loading } from 'components'
 
 interface Status {
@@ -9,6 +8,6 @@ interface Status {
 }
 
 export const Status: React.FC<Status> = ({ dueComplete, due, start, loading }) => {
-  const date = (target: string) => moment(target).format(`MMM YYYY`);
+  const date = (target: string) => new Date(target).toLocaleDateString('en-gb',{ year: 'numeric', month: 'short' });
   return loading ? <Loading lines={[0.6]} /> : <span>{ dueComplete ? `Finished: ${date(due)}` : `Started: ${date(start)}` }</span>
 }

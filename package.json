@@ -13,7 +13,6 @@
     "focus-visible": "^5.2.0",
     "gsap": "file:libraries/gsap-bonus.tgz",
     "html-react-parser": "^1.4.4",
-    "moment": "^2.29.1",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
