@@ -2,7 +2,7 @@
 
 .link {
   background-color: $teal--dark;
-  border-radius: 0.5rem;
+  border-radius: $border-radius-lg;
   display: inline-block;
   position: relative;
   padding: 0.625rem;
