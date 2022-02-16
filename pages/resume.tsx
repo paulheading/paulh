@@ -5,6 +5,8 @@ import parse from 'html-react-parser'
 import { Row, Skills } from 'components/resume'
 import { getPage } from 'scripts/functions'
 import { Loading } from 'components'
+import Head from 'components/head'
+import { resume } from 'scripts/seo'
 
 const Resume: React.FC<NextPage> = () => {
   const { loading, data } = useSelector(({ trello }) => trello);
@@ -14,6 +16,7 @@ const Resume: React.FC<NextPage> = () => {
   
   return (
     <div className={styles.container}>
+      <Head {...resume} />
       <div className={styles.wrap}>
         <div className={styles.page}>
           

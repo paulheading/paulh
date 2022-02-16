@@ -3,6 +3,8 @@ import styles from 'styles/pages/about.module.scss'
 import { getPage } from 'scripts/functions'
 import { Loading } from 'components'
 import parse from 'html-react-parser'
+import Head from 'components/head'
+import { about } from 'scripts/seo'
 
 const About: React.FC<NextPage> = () => {
   const { loading, data } = getPage("About");
@@ -10,6 +12,7 @@ const About: React.FC<NextPage> = () => {
   
   return (
     <div className={styles.container}>
+      <Head {...about} />
       <div className={styles.wrap}>
         <h1>{data.name}</h1>
         { content }
