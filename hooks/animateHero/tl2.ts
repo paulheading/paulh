@@ -9,6 +9,7 @@ export const tl2 = (target: RefObject<HTMLDivElement>) => {
     const svg = current.getElementsByTagName('svg')[0];
     const main = svg.querySelector(`#main`);
     const side = svg.querySelector(`#sidebar`);
+
     tl.clear()
       .set(side, { opacity: 0 })
       .set(main, { scale: 0.1, strokeWidth: 0 })
