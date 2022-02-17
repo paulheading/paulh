@@ -19,11 +19,11 @@ export const Header: React.FC<Header> = ({ name, owner, url, image }) => (
       </div>
       <div className={styles.wrap}>
         <div>
-          <div>
-            <a href={url} className={styles.name}>{ name }</a>
+          <div className={styles.name}>
+            <a href={url}>{ name }</a>
           </div>
-          <div>
-            <a href={owner.url} className={styles.owner}>{ owner.name }</a>
+          <div className={styles.owner}>
+            <a href={owner.url}>{ owner.name }</a>
           </div>
         </div>
         <div>
