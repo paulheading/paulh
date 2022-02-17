@@ -12,6 +12,7 @@ export const Header: React.FC = () => {
       <div className={styles.wrap}>
         <Link href="/">
           <a className={styles.home_button}>
+            <span className="sr-only">return to paulh homepage</span>
             <Desktop />
             <Mobile />
           </a>
