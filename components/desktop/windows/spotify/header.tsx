@@ -26,7 +26,7 @@ export const Header: React.FC<Header> = ({ name, owner, url, image }) => (
             <a href={owner.url}>{ owner.name }</a>
           </div>
         </div>
-        <div>
+        <div className={styles.icon}>
           <Spotify />
         </div>
       </div>
