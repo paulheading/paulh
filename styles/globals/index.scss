@@ -1,5 +1,5 @@
-@import "./mixins.scss";
-@import "./atomic.scss";
+@import "mixins";
+@import "atomic";
 
 body {
   font-family: $font-family-base;

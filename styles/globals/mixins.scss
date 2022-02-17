@@ -1,8 +1,8 @@
-@import "./variables.scss";
-@import "./mixins/media-queries.scss";
-@import "./mixins/focus.scss";
-@import "./mixins/loading.scss";
-@import "./mixins/desktop.scss";
+@import "variables";
+@import "mixins/media";
+@import "mixins/focus";
+@import "mixins/loading";
+@import "mixins/desktop";
 
 @mixin input-colors {
   &,

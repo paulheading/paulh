@@ -21,7 +21,7 @@ export const resume = {
   desc: "I've been a designer for the last 10 years, becoming a front-end designer in the last year. My title 'Full Stack Designer', reflects my focus on user experience and animation. I currently work for the Barbican in London, as well as on freelance projects such as https://36bournestreet.com. Last year, I completed my Full Stack Techdegree, with https://teamtreehouse.com"
 }
 
-export const not_found = {
+export const notfound = {
   title: "Paul Heading | 404 | Full Stack Designer",
   keywords: "portfolio, full stack designer, react, vue, frameworks, barbican, london",
   desc: "Oh no... this page is missing. Maybe the url is incorrect? If you think something is broken, please email me: hello@paulh.biz"
