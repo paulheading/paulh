@@ -18,7 +18,7 @@ const styleColor = (color: string | undefined) => {
 export const Badge: React.FC<Badge> = ({ children, color, loading, className }) => {
   const styleLoading = loading ? styles.loading : ""
   return (
-    <div className={`${styles.badge} ${styleLoading} ${styleColor(color)} ${className}`}>
+    <div className={`${styles.badge} ${styleLoading} ${styleColor(color)} ${className ? className : ""}`}>
       { children }
     </div>
   )
