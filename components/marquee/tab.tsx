@@ -32,7 +32,7 @@ export const Tab: React.FC = () => {
   return (
     <div className={styles.container}>
       <CreateLink more={ more }>
-        Read more
+        See Project
       </CreateLink>
     </div>
   )
