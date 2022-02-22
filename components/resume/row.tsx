@@ -1,6 +1,7 @@
 import styles from 'styles/pages/resume.module.scss'
 import { Card } from 'components/resume'
 import { getTrelloSuccessList, getTrelloSuccessCard } from 'state/actions/trello'
+import { published } from 'scripts/functions/trello'
 
 interface Row {
   list: getTrelloSuccessList
@@ -8,10 +9,8 @@ interface Row {
 }
 
 export const Row: React.FC<Row> = ({ list, cards }) => {
-    
   const printCards = () => {
-    const initial = cards.filter((_,index) => index <= 2);
-    return initial.map((card, index) => <div key={index} className={styles.column}><Card {...card} /></div>);
+    return published(cards).map((card, index) => <div key={index} className={styles.column}><Card {...card} /></div>);
   }
 
   return (

@@ -5,6 +5,10 @@
   font-family: $font-family-headings;
   font-size: $h6-font-size;
   font-weight: 400;
+
+  @include medium-down {
+    display: none;
+  }
 }
 
 .window_inner {

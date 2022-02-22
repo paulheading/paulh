@@ -13,8 +13,10 @@ export const Card: React.FC<getTrelloSuccessCard> = ({ name, labels, dueComplete
   return (
     <div>
       { labels && labels.map(({ name, color }, index) => {
-        const badgeData = { className: styles.badge, key: index, loading, color };
-        return <Badge {...badgeData}>{name}</Badge>
+        if (name !== 'Staging') {
+          const badgeData = { className: styles.badge, key: index, loading, color };
+          return <Badge {...badgeData}>{name}</Badge>          
+        }
       })}
       <h4>
         <Name {...nameData} />

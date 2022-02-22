@@ -25,7 +25,7 @@ const Resume: React.FC<NextPage> = () => {
               <h1 className={styles.name}>Paul Heading</h1>
             </div>
             <div className={styles.column}>
-              <div>Hackney, London</div>
+              <div>Camberwell, London</div>
               <a className={styles.link} href={`mailto:${email}`}>{email}</a>
             </div>
           </div>

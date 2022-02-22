@@ -16,7 +16,7 @@ export const Layout:React.FC = ({ children }) => {
   }
 
   if (env.is('local')) {
-    console.log("state: ", useSelector(state => state))
+    // console.log("state: ", useSelector(state => state))
   }
   
   return (
