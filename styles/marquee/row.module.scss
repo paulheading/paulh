@@ -1,5 +1,11 @@
 @import "styles/globals/mixins";
 
+.wrap {
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+}
+
 .container {
   border-bottom: 0.25rem solid black;
   border-top: 0.25rem solid black;
@@ -18,10 +24,4 @@
   @include focus {
     background-color: $focus;
   }
-}
-
-.phrase {
-  display: inline-block;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
 }

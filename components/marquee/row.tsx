@@ -8,22 +8,26 @@ export const Row:React.FC = () => {
   const { marquee, more } = getHero();
   const wrap = useRef<HTMLDivElement>(null);
 
-  const animation = {
-    tl: gsap.timeline({ defaults: { ease: "none", duration: 8, repeat: -1 } }),
-    go: (target: HTMLDivElement | null) => animation.tl.to(target, { x: -480 })
-  };
+  const defaults = {
+    ease: "none",
+    duration: 8
+  }
+
+  const tl = gsap.timeline({ defaults });
+
+  tl.set(wrap.current, { x: 0 }).to(wrap.current, { x: -(defaults.duration * 30) });
 
   const repeatPhrase = (marquee: string) => {
     let output = [];
     for (let index = 0; index < 10; index++) {
-      output.push(<span className={styles.phrase} key={index}>{marquee}</span>);
+      output.push(<span key={index}>{marquee}</span>);
     }
     return output;
   };
 
   useEffect(() => {
-    animation.go(wrap.current);
-  },[wrap]);
+    tl.restart();
+  },[marquee]);
 
   return (
     <div className={styles.container}>
