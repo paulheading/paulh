@@ -37,6 +37,7 @@
 
 .title {
   composes: content;
+  line-height: $line-height-md;
   padding-right: 2rem;
   padding-left: 2rem;
   z-index: 2;
