@@ -50,7 +50,7 @@
   @include medium-up {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1rem;
-    
+
     .title_row {
       grid-column: 1 / 4;
     }
@@ -76,7 +76,7 @@
         border-top: 1px dashed $gray-300;
         padding-top: 1.5rem;
       }
-    }    
+    }
   }
 }
 
@@ -100,7 +100,7 @@
 
 .name {
   @include medium-down {
-    font-size: $h3-font-size;
+    font-size: $font-size-h3;
   }
 }
 

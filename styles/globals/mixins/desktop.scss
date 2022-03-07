@@ -14,10 +14,10 @@
 }
 
 @mixin skiplink {
+  border-radius: $border-radius-lg;
   border: 0.25rem solid black;
   background-color: white;
-  font-size: $h5-font-size;
-  border-radius: $border-radius-lg;
+  font-size: $font-size-h5;
   position: absolute;
   padding: 0.75rem;
   color: black;

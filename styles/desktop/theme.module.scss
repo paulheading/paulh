@@ -3,8 +3,8 @@
 .window_outer {
   @include window_outer;
   font-family: $font-family-headings;
-  font-size: $h6-font-size;
-  font-weight: 400;
+  font-size: $font-size-h6;
+  font-weight: $font-weight-normal;
 
   @include medium-down {
     display: none;
@@ -40,7 +40,7 @@
 }
 
 .downloads {
-  font-size: $h4-font-size;
+  font-size: $font-size-h4;
 }
 
 .graph svg {

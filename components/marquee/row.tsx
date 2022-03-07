@@ -14,8 +14,11 @@ export const Row:React.FC = () => {
   }
 
   const tl = gsap.timeline({ defaults });
+  const target = wrap.current;
 
-  tl.set(wrap.current, { x: 0 }).to(wrap.current, { x: -(defaults.duration * 30) });
+  if (target) {
+    tl.set(target, { x: 0 }).to(target, { x: -(defaults.duration * 30) });  
+  }  
 
   const repeatPhrase = (marquee: string) => {
     let output = [];

@@ -7,7 +7,7 @@
   position: relative;
   padding: 0.625rem;
   color: white;
-  line-height: 1;
+  line-height: $line-height-sm;
   z-index: 2;
 
   @include focus {

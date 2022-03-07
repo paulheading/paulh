@@ -12,7 +12,7 @@
 .copy {
   margin-top: 0.5rem;
   color: $gray-700;
-  font-size: 1rem;
+  font-size: $font-size-h6;
 
   a {
     @include focus {

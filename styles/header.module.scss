@@ -28,8 +28,8 @@
 
 .button_core {
   text-decoration: none;
-  font-weight: 800;
-  line-height: 1;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-sm;
 }
 
 .solid_button {
@@ -38,7 +38,7 @@
   padding: 0.75rem;
 
   @include xsmall-up {
-    font-size: 1.5rem;
+    font-size: $font-size-h4;
   }
 }
 
@@ -50,7 +50,7 @@
   padding-top: 0.5rem;
 
   @include xsmall-up {
-    font-size: 1.5rem;
+    font-size: $font-size-h4;
   }
 
   @include focus {

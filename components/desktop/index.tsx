@@ -63,9 +63,9 @@ export const Desktop: React.FC = () => {
             <Folder target={spotify_2021.ref.current}>
               spotify 2021
             </Folder>
-            <Folder target={trello.ref.current}>
+            {/* <Folder target={trello.ref.current}>
               trello
-            </Folder>
+            </Folder> */}
           </div>
         </div>
         <Credit />

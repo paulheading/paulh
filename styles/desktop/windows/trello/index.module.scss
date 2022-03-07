@@ -15,10 +15,10 @@
   .window_inner {
     @include window_inner;
     background-color: $trello-bg;
-    font-size: $h5-font-size;
+    font-size: $font-size-h5;
     padding-right: 0.625rem;
     padding-left: 0.625rem;
     color: $trello-text;
-    font-weight: 600;
+    font-weight: $font-weight-medium;
   }
 }

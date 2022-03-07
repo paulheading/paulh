@@ -2,10 +2,11 @@
 @import "atomic";
 
 body {
-  font-family: $font-family-base;
+  font-family: $font-family-body;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-lg;
   background-color: $gray-200;
-  font-size: 1.25rem;
-  font-weight: 800;
+  font-size: $font-size-body;
   padding: 0;
   margin: 0;
 }
@@ -20,7 +21,7 @@ a {
 
 h1 {
   font-family: $font-family-headings;
-  font-size: $h1-font-size;
+  font-size: $font-size-h2;
   margin: 0;
 }
 
@@ -31,24 +32,24 @@ h2 {
 
 h3 {
   font-family: $font-family-headings;
-  font-size: $h3-font-size;
+  font-size: $font-size-h3;
   margin: 0;
 }
 
 h4 {
   font-family: $font-family-headings;
-  font-size: $h4-font-size;
+  font-size: $font-size-h4;
   margin: 0;
 }
 
 h5 {
   font-family: $font-family-headings;
-  font-size: $h5-font-size;
+  font-size: $font-size-h5;
   margin: 0;
 }
 
 h6 {
-  font-size: $h6-font-size;
+  font-size: $font-size-h6;
   margin: 0;
 }
 
@@ -67,7 +68,8 @@ p {
   }
 }
 
-input, textarea {
+input,
+textarea {
   -webkit-appearance: none;
   border-radius: 0;
 }
