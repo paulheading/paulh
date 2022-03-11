@@ -1,6 +1,7 @@
 @import "styles/globals/mixins";
 
 .container {
+  line-height: $line-height-sm;
   position: absolute;
   top: -3.25rem;
   width: 100%;
