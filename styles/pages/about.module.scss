@@ -1,6 +1,7 @@
 @import "styles/globals/mixins";
 
 .container {
+  min-width: $min-width-site;
   padding-bottom: 8rem;
   padding-right: 2rem;
   padding-left: 2rem;

@@ -8,13 +8,14 @@
 
 @include medium-down {
   .container {
+    height: 2.75rem;
     display: block;
+    width: auto;
   }
 }
 
-@include xsmall-down {
+@include small-down {
   .container {
-    height: 44px;
-    width: auto;
+    height: 2.5rem;
   }
 }

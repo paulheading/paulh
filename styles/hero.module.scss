@@ -1,6 +1,7 @@
 @import "styles/globals/mixins";
 
 .container {
+  min-width: $min-width-site;
   place-items: center;
   overflow: hidden;
   display: grid;

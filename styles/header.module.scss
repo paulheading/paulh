@@ -1,6 +1,7 @@
 @import "styles/globals/mixins";
 
 .container {
+  min-width: $min-width-site;
   padding: 2rem 2rem 1rem;
   position: absolute;
   z-index: 2;
@@ -21,7 +22,7 @@
   display: flex;
   gap: 0.75rem;
 
-  @include xsmall-up {
+  @include small-up {
     gap: 1.25rem;
   }
 }
@@ -37,7 +38,7 @@
   border-radius: 0.25rem;
   padding: 0.75rem;
 
-  @include xsmall-up {
+  @include small-up {
     font-size: $font-size-h4;
   }
 }
@@ -49,7 +50,7 @@
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
 
-  @include xsmall-up {
+  @include small-up {
     font-size: $font-size-h4;
   }
 

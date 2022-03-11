@@ -2,6 +2,7 @@
 
 .container {
   background-color: $gray-200;
+  min-width: $min-width-site;
   padding: 5rem 1rem 0;
   overflow: hidden;
   color: $topbar;
