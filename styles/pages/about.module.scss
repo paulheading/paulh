@@ -1,26 +1,22 @@
 @import "styles/globals/mixins";
 
 .container {
-  min-width: $min-width-site;
-  padding-bottom: 8rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  padding-top: 9rem;
-  text-align: left;
-
-  @include medium-up {
-    padding-bottom: 9rem;
-    padding-top: 10rem;
-  }
+  @include container;
 
   h1 {
-    font-size: $font-size-h1;
     margin-bottom: 1rem;
+
+    @include medium-up {
+      font-size: $font-size-h1;
+    }
   }
 
   p {
     font-weight: $font-weight-normal;
-    font-size: $font-size-h4;
+
+    @include medium-up {
+      font-size: $font-size-h4;
+    }
   }
 }
 

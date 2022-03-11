@@ -22,7 +22,7 @@
   display: flex;
   gap: 0.75rem;
 
-  @include small-up {
+  @include xsmall-up {
     gap: 1.25rem;
   }
 }
@@ -38,7 +38,7 @@
   border-radius: 0.25rem;
   padding: 0.75rem;
 
-  @include small-up {
+  @include xsmall-up {
     font-size: $font-size-h4;
   }
 }
@@ -50,7 +50,7 @@
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
 
-  @include small-up {
+  @include xsmall-up {
     font-size: $font-size-h4;
   }
 

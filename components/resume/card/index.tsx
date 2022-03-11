@@ -18,7 +18,7 @@ export const Card: React.FC<getTrelloSuccessCard> = ({ name, labels, dueComplete
           return <Badge {...badgeData}>{name}</Badge>          
         }
       })}
-      <h4>
+      <h4 className={styles.name}>
         <Name {...nameData} />
       </h4>
       <h6 className={styles.date}>
